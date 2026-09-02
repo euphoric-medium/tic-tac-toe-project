@@ -1,0 +1,282 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+    BODY
+    ========================= */
+
+    body {
+        min-height: 100vh;
+
+        background:
+            radial-gradient(
+                circle at 50% 42%,
+                rgba(255, 210, 120, 0.10),
+                transparent 32%
+            ),
+            #090909;
+
+        color: #ffffff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    /* =========================
+    TITLE
+    ========================= */
+
+    h1 {
+        margin-top: 25px;
+
+        color: #f7f3ea;
+
+        font-size: 2.7rem;
+        font-weight: 600;
+
+        letter-spacing: 1px;
+
+        text-align: center;
+
+        text-shadow:
+            0 0 25px rgba(255, 220, 160, 0.18);
+    }
+
+
+    /* =========================
+    GAME CONTAINER
+    ========================= */
+
+    .container {
+        height: 68vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* =========================
+    GAME BOARD
+    ========================= */
+
+    .game {
+        height: 60vmin;
+        width: 60vmin;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 1.5vmin;
+
+        padding: 1vmin;
+    }
+
+
+    /* =========================
+    GAME BOX
+    ========================= */
+
+    .box {
+        height: 18vmin;
+        width: 18vmin;
+
+        border: 1px solid #303030;
+        border-radius: 9px;
+
+        background: #181818;
+
+        /* X and O */
+        color: #f4d58d;
+
+        font-size: clamp(45px, 7vmin, 82px);
+        font-weight: 600;
+
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition:
+            transform 0.18s ease,
+            background 0.18s ease,
+            border-color 0.18s ease,
+            box-shadow 0.18s ease;
+    }
+
+
+    /* =========================
+    BOX HOVER
+    ========================= */
+
+    .box:hover {
+        background: #202020;
+
+        border-color: #555555;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.35),
+            0 0 18px rgba(244, 213, 141, 0.06);
+    }
+
+
+    /* =========================
+    BOX CLICK
+    ========================= */
+
+    .box:active {
+        transform: scale(0.97);
+    }
+
+
+    /* =========================
+    RESET BUTTON
+    ========================= */
+
+    #rstbtn {
+        padding: 13px 28px;
+
+        margin-top: 10px;
+
+        font-size: 1rem;
+        font-weight: 600;
+
+        letter-spacing: 0.3px;
+
+        background: #f4d58d;
+        color: #111111;
+
+        border: none;
+        border-radius: 7px;
+
+        cursor: pointer;
+
+        box-shadow:
+            0 4px 18px rgba(244, 213, 141, 0.10);
+
+        transition:
+            transform 0.18s ease,
+            background 0.18s ease,
+            box-shadow 0.18s ease;
+    }
+
+
+    #rstbtn:hover {
+        background: #ffe4a8;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 7px 25px rgba(244, 213, 141, 0.18);
+    }
+
+
+    #rstbtn:active {
+        transform: translateY(0);
+    }
+
+
+    /* =========================
+    NEW GAME BUTTON
+    ========================= */
+
+    #new-btn {
+        padding: 13px 28px;
+
+        font-size: 1rem;
+        font-weight: 600;
+
+        letter-spacing: 0.3px;
+
+        background: #181818;
+        color: #f4d58d;
+
+        border: 1px solid #444444;
+        border-radius: 7px;
+
+        cursor: pointer;
+
+        transition:
+            transform 0.18s ease,
+            background 0.18s ease,
+            border-color 0.18s ease,
+            box-shadow 0.18s ease;
+    }
+
+
+    #new-btn:hover {
+        background: #222222;
+
+        border-color: #f4d58d;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+
+
+    #new-btn:active {
+        transform: translateY(0);
+    }
+
+
+    /* =========================
+    WINNER MESSAGE
+    ========================= */
+
+    #msg {
+        color: #f4d58d;
+
+        font-size: 3vmin;
+        font-weight: 500;
+
+        text-align: center;
+
+        text-shadow:
+            0 0 20px rgba(244, 213, 141, 0.20);
+    }
+
+
+    /* =========================
+    MESSAGE CONTAINER
+    ========================= */
+
+    .msgContainer {
+        height: 90vmin;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+
+        gap: 3rem;
+    }
+
+
+    /* =========================
+    HIDDEN
+    ========================= */
+
+    .hide {
+        display: none;
+    }
+
